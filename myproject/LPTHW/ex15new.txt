@@ -1,0 +1,5 @@
+What we want to do is “open” that fi le in our script and print it out. However, we do not want
+to just “hard code” the name ex15_sample.txt into our script. “Hard coding” means putting
+some bit of information that should come from the user as a string right in our program. That’s
+bad because we want it to load other fi les later. The solution is to use argv and raw_input to ask
+the user what fi le the user wants instead of “hard coding” the file’s name
