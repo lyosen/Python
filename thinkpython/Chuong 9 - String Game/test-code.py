@@ -1,6 +1,5 @@
 def has_no_e():
-    link = input("Input link of file: \n")
-    fopen = open(link, "r")
+    fopen = open("words1.txt", "r")
     fread = (fopen.read()).strip()
     fread += " "
     count_e = 0
@@ -21,9 +20,9 @@ def has_no_e():
     print("List after cut space: %s \nAnd len of List: %s" %(list_after_cut_space,len(list_after_cut_space)))
     
     for i in list_after_cut_space:
-        if "e" not in i:
+        # print(i)
+        if  "E" or "e" not in i:
             print(i)
-        elif "E" not in i:
-            print(i)
-
+##        else:
+##            print ("... Not e: ",i)
 print(has_no_e())
