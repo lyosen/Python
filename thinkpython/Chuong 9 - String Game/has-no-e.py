@@ -22,9 +22,9 @@ def has_no_e():
             list_after_cut_space.append(words)
             words = ""
     print("List after cut space: %s \nAnd len of List: %s" %(list_after_cut_space,len(list_after_cut_space)))
+   
     
     # count no "e" and has "e"
-
     #  case 1 : len(list_after_cut_space) = 1 ex: list_after_cut_space = ["NguyenLETuan"]
     #  and list_after_cut_space[0] = NguyenLEtuan
     if len(list_after_cut_space) == 1:
