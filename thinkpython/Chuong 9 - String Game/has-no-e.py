@@ -2,8 +2,8 @@
 
 
 def has_no_e():
-    link = input("Input link of file: \n")
-    fopen = open(link, "r")
+    # link = input("Input link of file: \n")
+    fopen = open("D:/Data Sync/MegaSync/Python/thinkpython/Chuong 9 - String Game/words1.txt", "r")
     fread = (fopen.read()).strip()
     fread += " "
     count_e = 0
@@ -22,8 +22,8 @@ def has_no_e():
             list_after_cut_space.append(words)
             words = ""
     print("List after cut space: %s \nAnd len of List: %s" %(list_after_cut_space,len(list_after_cut_space)))
-   
-    
+
+
     # count no "e" and has "e"
     #  case 1 : len(list_after_cut_space) = 1 ex: list_after_cut_space = ["NguyenLETuan"]
     #  and list_after_cut_space[0] = NguyenLEtuan
@@ -35,6 +35,7 @@ def has_no_e():
             count_e += list_after_cut_space[0].count("E")
             percent_e = count_e * 100/(len(list_after_cut_space[0]))
             return percent_e, list_after_cut_space
+
     #   case 2 : len(list_after_cut_space) > 1 ex: list_after_cut_space = ["NguyenLETuan","Lyosen"]
     elif len(list_after_cut_space) > 1:
         for j in list_after_cut_space:
@@ -46,7 +47,8 @@ def has_no_e():
                 count_e += j.count("e")
                 count_e += j.count("E")
                 print (".... count e: ", count_e)
-        percent_e = count_e * 100/(count_e + count_not_e)
-        return percent_e, list_no_e
-    # print (list_no_e,percent_e)
-print(has_no_e())
+        percent_e = len(list_no_e) * 100/(len(list_after_cut_space))
+    return percent_e, list_no_e
+
+a = has_no_e()
+print(a) 
