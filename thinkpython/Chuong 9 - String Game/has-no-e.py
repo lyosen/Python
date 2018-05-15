@@ -11,7 +11,9 @@ def has_no_e():
     list_no_e = []
     words = ""
     list_after_cut_space = []
-
+    f = open("D:/Data Sync/MegaSync/Python/thinkpython/Chuong 9 - String Game", "r")
+    fre = f.read
+    print(len(fre))
     # Cut Space
     for i in fread:
         if i != " ":
@@ -21,11 +23,11 @@ def has_no_e():
         else:
             list_after_cut_space.append(words)
             words = ""
-    print("List after cut space: %s \nAnd len of List: %s" %(list_after_cut_space,len(list_after_cut_space)))
-
+    print("List after cut space: %s \nAnd len of List: %s"% (list_after_cut_space, len(list_after_cut_space)))
 
     # count no "e" and has "e"
-    #  case 1 : len(list_after_cut_space) = 1 ex: list_after_cut_space = ["NguyenLETuan"]
+    #  case 1 : len(list_after_cut_space) = 1 ex: 
+    # list_after_cut_space = ["NguyenLETuan"]
     #  and list_after_cut_space[0] = NguyenLEtuan
     if len(list_after_cut_space) == 1:
         if len(list_after_cut_space[0]) == 0:
@@ -36,7 +38,8 @@ def has_no_e():
             percent_e = count_e * 100/(len(list_after_cut_space[0]))
             return percent_e, list_after_cut_space
 
-    #   case 2 : len(list_after_cut_space) > 1 ex: list_after_cut_space = ["NguyenLETuan","Lyosen"]
+    #   case 2 : len(list_after_cut_space) > 1 ex: 
+    # list_after_cut_space = ["NguyenLETuan","Lyosen"]
     elif len(list_after_cut_space) > 1:
         for j in list_after_cut_space:
             if "e" not in j and "E" not in j:
@@ -46,9 +49,9 @@ def has_no_e():
             else:
                 count_e += j.count("e")
                 count_e += j.count("E")
-                print (".... count e: ", count_e)
+                print(".... count e: ", count_e)
         percent_e = len(list_no_e) * 100/(len(list_after_cut_space))
     return percent_e, list_no_e
 
 a = has_no_e()
-print(a) 
+print(a)
