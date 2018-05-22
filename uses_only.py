@@ -10,7 +10,6 @@ def uses_only():
 
     if list_word != []:
         print("False")
-    elif list_word ==  []:
+    elif list_word == []:
         print("True")
 uses_only()
-
