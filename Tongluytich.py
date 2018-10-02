@@ -18,3 +18,5 @@ def Cumulative_total():
     print("\n")
     print(t2)
 Cumulative_total()
+
+
